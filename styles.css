@@ -1,0 +1,18 @@
+form {
+    margin: auto;
+    padding: 20px;
+}
+
+input[type="number"i] {
+    float: right;
+    width: 20%;
+}
+
+.qty { float: right; }
+button { border-radius: 10px;}
+
+@media only screen and (min-width: 600px) {
+    form {
+        width: 100%;
+    }
+}

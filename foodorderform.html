@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Order Form</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggler"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-danger" href="#">Yum Bites</a>
+      <div class="collapse navbar-collapse" id="toggler">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Order Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <form action="/takeOrder.php" method="GET">
+    <div class="row">    
+      <div class="col-sm-8">
+        <h1>Food Order Form</h1>
+        <div class="form-group">
+          <label for="cuisine">Select Cuisine</label>
+          <select name="cuisine" id="cuisine">
+            <option value="Asian">Asian</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="foodtype">Food Type</label>
+          <input type="checkbox" name="appetizer" id="" />
+          <label for="appetizer">Appetizer</label>
+          <input type="checkbox" name="meal" id="" />
+          <label for="meal">Meal</label>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <input type="checkbox" name="brisket" id="" />
+              <label for="brisket">Thin Sliced Brisket</label>
+              <input type="number" name="quantity" id="" placeholder="0" min="0" max="10" />
+              <div>Ideal for K-BBQ</div>
+              <img src="bbq.jpg" class="img-fluid" width="25%" alt="korean bbq">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <input type="checkbox" name="friedchicken" id="" />
+              <label for="friedchicken">Fried Chicken</label>
+              <input type="number" name="quantity" id="" placeholder="0" min="0" max="10" />
+              <div>Glazed in a sweet, flavorful and spicy sauce</div>
+              <img src="friedchicken.jpg" class="img-fluid" width="25%" alt="fried chicken">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="shadow p-3 mb-5 bg-white rounded">
+            <input type="checkbox" name="bobatea" id="" />
+            <label for="bobatea">Boba Tea</label>
+            <input type="number" name="quantity" id="" placeholder="0" min="0" max="10" />
+            <div>Red Guava, Jasmine Tea with Mango star and Strawberry heart jelly</div>
+            <img src="boba.png" class="img-fluid" width="25%" alt="boba">
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Place Order</button>
+      </div>
+
+  <div class="col-sm-4">
+    <h2>Shopping Cart</h2>
+    <div class="card shadow bg-white rounded">Thin Sliced Brisket<div class="qty">1</div></div>
+    <div class="card shadow bg-white rounded">Fried Chicken<div class="qty">1</div></div>
+    <div class="card shadow bg-white rounded">Boba Tea<div class="qty">1</div></div>
+    <button type="submit" class="btn-primary">Confirm</button>
+  </div>
+</div>
+  
+  </form>
+  </div>
+</div>
+</body>
+</html>
